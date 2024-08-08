@@ -1,0 +1,53 @@
+guid: 9377d7fe-6674-461b-81f1-873915c91787
+liveboard:
+  name: lb load-context-book response ak
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Lo Revenue by Monthly Lo Commitdate
+      tables:
+      - id: ws sn ak
+        name: ws sn ak
+        fqn: c0f5f4e5-a3a0-4924-abe5-7c136ecc329f
+      search_query: "[Lo Revenue] [Lo Commitdate] [Lo Commitdate].monthly"
+      answer_columns:
+      - name: Month(Lo Commitdate)
+      - name: Total Lo Revenue
+      table:
+        table_columns:
+        - column_id: Month(Lo Commitdate)
+          show_headline: false
+        - column_id: Total Lo Revenue
+          show_headline: false
+        ordered_column_ids:
+        - Month(Lo Commitdate)
+        - Total Lo Revenue
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(Lo Commitdate)\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Revenue\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Lo Commitdate)
+        - column_id: Total Lo Revenue
+        axis_configs:
+        - x:
+          - Month(Lo Commitdate)
+          "y":
+          - Total Lo Revenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Month(Lo Commitdate)\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"60aec50f-0cc7-44eb-865a-7ebd25d7b21a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Revenue\"],\"isOpposite\": false}},{\"id\": \"919beed2-883b-492d-876f-a97cffb8ccda\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Lo Commitdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Lo Revenue\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: ff19df7b-3050-4903-bddd-c37a1303535c
+  filters:
+  - column:
+    - Lo Commitdate
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6

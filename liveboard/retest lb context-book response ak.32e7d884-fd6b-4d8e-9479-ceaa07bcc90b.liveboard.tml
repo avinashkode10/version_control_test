@@ -1,0 +1,92 @@
+guid: 32e7d884-fd6b-4d8e-9479-ceaa07bcc90b
+liveboard:
+  name: retest lb context-book response ak
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total LO_DISCOUNT by Quarterly LO_COMMITDATE - Fiscal
+      tables:
+      - id: ws-lo-part-ak
+        name: ws-lo-part-ak
+        fqn: 0fce5515-cdc5-4751-88e6-7e5f8c59181f
+      search_query: "[LO_COMMITDATE] [LO_COMMITDATE].quarterly [LO_DISCOUNT]"
+      answer_columns:
+      - name: Quarter(LO_COMMITDATE)
+      - name: Total LO_DISCOUNT
+      table:
+        table_columns:
+        - column_id: Quarter(LO_COMMITDATE)
+          show_headline: false
+        - column_id: Total LO_DISCOUNT
+          show_headline: false
+        ordered_column_ids:
+        - Quarter(LO_COMMITDATE)
+        - Total LO_DISCOUNT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Quarter(LO_COMMITDATE)
+        - column_id: Total LO_DISCOUNT
+        axis_configs:
+        - x:
+          - Quarter(LO_COMMITDATE)
+          "y":
+          - Total LO_DISCOUNT
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Quarter(LO_COMMITDATE)\",\"columnProperty\": {}},{\"columnId\": \"Total LO_DISCOUNT\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"842e0c2b-ffbe-4de0-b2c5-83463ea80244\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_DISCOUNT\"],\"isOpposite\": false}},{\"id\": \"62972012-e749-41b6-82c4-fefa0c2aae56\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(LO_COMMITDATE)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total LO_DISCOUNT\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 23194902-5ef1-40fa-a428-6d42582ca649
+  - id: Viz_2
+    answer:
+      name: Total C_CUSTKEY by O_ORDERPRIORITY
+      tables:
+      - id: ws jdbc-db2 ak
+        name: ws jdbc-db2 ak
+        fqn: d0763c8f-e0fd-4e54-9898-9dfac49b5927
+      search_query: "[C_CUSTKEY] [C_MKTSEGMENT] [O_ORDERPRIORITY]"
+      answer_columns:
+      - name: C_MKTSEGMENT
+      - name: O_ORDERPRIORITY
+      - name: Total C_CUSTKEY
+      table:
+        table_columns:
+        - column_id: C_MKTSEGMENT
+          show_headline: false
+        - column_id: O_ORDERPRIORITY
+          show_headline: false
+        - column_id: Total C_CUSTKEY
+          show_headline: false
+        ordered_column_ids:
+        - C_MKTSEGMENT
+        - O_ORDERPRIORITY
+        - Total C_CUSTKEY
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: C_MKTSEGMENT
+        - column_id: O_ORDERPRIORITY
+        - column_id: Total C_CUSTKEY
+        axis_configs:
+        - x:
+          - O_ORDERPRIORITY
+          "y":
+          - Total C_CUSTKEY
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 02dac029-8074-4990-9620-5f03844bcc67
+  filters:
+  - column:
+    - ws-lo-part-ak::LO_COMMITDATE
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 4
+      width: 3
